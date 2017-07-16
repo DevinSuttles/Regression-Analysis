@@ -1,6 +1,7 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
+import math
 
 
 def update_line(num, data, line):
@@ -48,6 +49,14 @@ xyAvg = xyAvg(d) #xy avg
 yAvg = yAvg(d)
 slope = (xAvg*yAvg-xyAvg)/(xAvg*xAvg-xsAvg)
 
+
+
+#
+def slope_M():
+	return (xAvg*Yavg-xyAvg)/(math.pow(xAvg,2)-xsAvg)
+
+def slope_B():
+	return yAvg-slope_M()*xAvg;
 
 print(d)
 print(xAvg)
