@@ -30,42 +30,36 @@ def xsAvg(d):#x squared avg, assumes that x increments as an integer
     return sum/d.size
 
 def yAvg(d):
-    sum = 0
+    sum = 0.0
     for i in d:
         sum += i
     return sum/d.size
 
 fig1 = plt.figure()
 
-dataNum = 3
-d = 10*np.random.rand(dataNum, 1)#10=x&y limit and # of points. 3=# of points * 3
-
-#Get x avg, x^2 avg, xy avg, and ....
+dataNum = 2
+d = 10*np.random.rand(dataNum, 1)#10=x&y limit and # of points. Right parameter = how many points per x value
 
 xAvg = xAvg(d) #x avg
 xsAvg = xsAvg(d) #x^2 avg
 xyAvg = xyAvg(d) #xy avg
-yAvg = yAvg(d)
+yAvg = yAvg(d) #yAvg
 slope = (xAvg*yAvg-xyAvg)/(xAvg*xAvg-xsAvg)
 
-
 print(d)
-print(xAvg)
-print(xsAvg)
-print(xyAvg)
-
+print("x average: ", xAvg, "\nx-squared average: ", xsAvg, "\nxy average: ", xyAvg, "\ny average: ", yAvg)
 print("slope =",slope)
 
 
 
 
 yIntercept = yAvg-slope*xAvg
-z = np.arange(0,10,.005)
+z = np.arange(-10,100,1)
 y = slope*z+yIntercept
 ax = plt.plot(d,'go') #'Go' displays the datapoints
 ax = plt.plot(y,z)
 plt.xlim(-1, 10)
-plt.ylim(0,10)
+plt.ylim(-5,10)
 plt.xlabel('x')
 plt.ylabel('y')
 plt.title('Linear Regression Test')
