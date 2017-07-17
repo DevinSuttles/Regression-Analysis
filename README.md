@@ -4,7 +4,7 @@ A program for generating random data and finding the lines of best fit using lin
 ![Linear Regression Example](docs/linRegExample.PNG)
 ## How does it work?
 ### Linear Regression
-For a line of the form  ![Linear Line Equation](docs/linearLine.gif)  the sum of the squared residuals is 
+For a line of the form &nbsp; ![Linear Line Equation](docs/linearLine.gif) &nbsp; the sum of the squared residuals is 
 
 ![SE formula](docs/SE_Latex.gif) 
 
@@ -15,6 +15,8 @@ which we want to minimize. But first, we expand the sum to
 which simplifies to 
 
 ![Further Simplified Sum](docs/SE3_Latex.gif)
+
+Of the right expression, all terms are constant except &nbsp; ![a0](docs/a0.gif) &nbsp; and &nbsp; ![a0](docs/a1.gif) &nbsp;, so the minimum of the function can be found by setting the partial derivatives with respect to both those terms to zero and solving the system of equations.
 
 (to be continued)
 ### Quadratic Regression
