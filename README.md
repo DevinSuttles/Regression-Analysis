@@ -4,9 +4,7 @@ A program for generating random data and finding the lines of best fit using lin
 ![Linear Regression Example](docs/linRegExample.PNG)
 ## How does it work?
 ### Linear Regression
-For a line of the form ![Linear Line Equation](docs/linearLine.gif) 
-
-the sum of the squared residuals is 
+For a line of the form ![Linear Line Equation](docs/linearLine.gif) the sum of the squared residuals is 
 
 ![SE formula](docs/SE_Latex.gif) 
 
