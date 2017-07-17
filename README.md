@@ -1,7 +1,7 @@
 # Regression-Analysis
 A program for generating random data and finding the lines of best fit using linear or quadratic regression.
 ## Examples
-[Linear Regression Example](docs/linRegExample.PNG)
+![Linear Regression Example](docs/linRegExample.PNG)
 ## How does it work?
 ## Room for improvement
 - The types of regression lines can easily be expanded, incorporating power or logarithmic lines for example.
