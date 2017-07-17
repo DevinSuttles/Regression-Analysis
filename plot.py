@@ -61,6 +61,6 @@ plt.xlim(-1, 10)
 plt.ylim(-5,10)
 plt.xlabel('x')
 plt.ylabel('y')
-plt.title('Linear Regression Test')
+plt.title('Linear Regression')
 
 plt.show()
