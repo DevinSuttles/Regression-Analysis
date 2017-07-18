@@ -19,11 +19,27 @@ which simplifies to
 Of the right expression, all terms are constant except &nbsp; ![a0](docs/a0.gif) &nbsp; and &nbsp; ![a0](docs/a1.gif), so the minimum of the function can be found by setting the partial derivatives with respect to both those terms to zero and solving the system of equations. Doing this gives
 
 ![a1](docs/linA1.gif)
+
 ![a0](docs/linA0.gif)
 
 Both of which can finally be used to plot the line.
 
 ### Quadratic Regression
+The derivation for the coefficients of a best fitting quadratic line is the same as the simple linear case.
+
+![Quadratic SE](QuadSE.gif)
+
+After some simplifying,
+
+![Quadratic SE simplified](SE6_Latex.gif)
+
+And finally, solving for the minimum of this simplified equation results in
+
+![](QuadA2.gif)
+
+![](QuadA1.gif)
+
+![](QuadA0.gif)
 
 ## Room for improvement
 - The types of regression lines can easily be expanded, incorporating power or logarithmic lines for example.
