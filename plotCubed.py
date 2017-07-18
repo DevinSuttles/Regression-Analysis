@@ -41,9 +41,9 @@ xyAvg = xyAvg(d) #xy avg
 yAvg = yAvg(d) #y avg
 xxAvg=xAvg*xsAvg
 #y=Ax^2+Bx+C
+A=(xsAvg*yAvg*xsAvg-xAvg*yAvg*xxAvg)/(math.pow(xAvg,6)-math.pow(xxAvg,2))
 B=(xAvg*yAvg*math.pow(xAvg,4)-xsAvg*yAvg*math.pow(xAvg,3))/(math.pow(xAvg,6)-math.pow(xxAvg,2))
-C=(xsAvg*yAvg*xsAvg-xAvg*yAvg*xxAvg)/(math.pow(xAvg,6)-math.pow(xxAvg,2))
-A=yAvg-B*xAvg-C*xsAvg
+C=yAvg-B*xAvg-C*xsAvg
 
 z = np.arange(0,10,1)
 plt.ylim(-5,10)
