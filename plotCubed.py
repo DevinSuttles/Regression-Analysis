@@ -2,10 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import math
 
-def update_line(num, data, line):
-    line.set_data(data[..., :num])
-    return line,
-
 def xyAvg(d):#assumes that x increments as an integer
     sum = 0.0
     counter = 0
@@ -36,7 +32,7 @@ def yAvg(d):
 
 fig1 = plt.figure()
 
-dataNum = 2
+dataNum = 10
 d = 10*np.random.rand(dataNum, 1)#10=x&y limit and # of points. 3=# of points * 3     
 
 xAvg = xAvg(d) #x avg
@@ -49,7 +45,9 @@ B=(xAvg*yAvg*math.pow(xAvg,4)-xsAvg*yAvg*math.pow(xAvg,3))/(math.pow(xAvg,6)-mat
 C=(xsAvg*yAvg*xsAvg-xAvg*yAvg*xxAvg)/(math.pow(xAvg,6)-math.pow(xxAvg,2))
 A=yAvg-B*xAvg-C*xsAvg
 
-z = np.arange(-10,100,1)
+z = np.arange(0,10,1)
+plt.ylim(-5,10)
+plt.xlim(-1,11)
 ax = plt.plot(d,'go') #'Go' displays the datapoints
-ax = plt.plot(math.pow(z,2),A+z*A+B)
+ax = plt.plot(z,C*z*z+B*z+A)
 
