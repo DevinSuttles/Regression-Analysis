@@ -35,11 +35,11 @@ After some simplifying,
 
 And finally, solving for the minimum of this simplified equation results in
 
-![](QuadA2.gif)
+![](docs/quadA2.gif)
 
-![](QuadA1.gif)
+![](docs/QuadA1.gif)
 
-![](QuadA0.gif)
+![](docs/QuadA0.gif)
 
 ## Room for improvement
 - The types of regression lines can easily be expanded, incorporating power or logarithmic lines for example.
