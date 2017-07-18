@@ -27,11 +27,11 @@ Both of which can finally be used to plot the line.
 ### Quadratic Regression
 The derivation for the coefficients of a best fitting quadratic line is the same as the simple linear case.
 
-![Quadratic SE](QuadSE.gif)
+![Quadratic SE](docs/quadSE.gif)
 
 After some simplifying,
 
-![Quadratic SE simplified](SE6_Latex.gif)
+![Quadratic SE simplified](docs/SE6_Latex.gif)
 
 And finally, solving for the minimum of this simplified equation results in
 
