@@ -2,6 +2,8 @@
 A program for generating random data and finding the lines of best fit using linear or quadratic regression.
 ## Examples
 ![Linear Regression Example](docs/linRegExample.PNG)
+
+![Quadratic Regression Example](docs/quadRegExample.PNG)
 ## How does it work?
 ### Linear Regression
 For a line of the form &nbsp; ![Linear Line Equation](docs/linearLine.gif) &nbsp; the sum of the squared residuals is 

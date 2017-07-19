@@ -58,23 +58,20 @@ def xxxAvgf(d):
 
 fig1 = plt.figure()
 
-dataNum = 6
-d = 10*np.random.rand(dataNum, 1)#10=x&y limit and # of points. 3=# of points * 3     
+dataNum = 10
+d = 20*np.random.rand(dataNum, 1)#10=x&y limit and # of points. 3=# of points * 3     
 
 xAvg = xAvgf(d) #x avg
 xxAvg = xsAvgf(d) #x^2 avg
 xyAvg = xyAvgf(d) #xy avg
 yAvg = yAvgf(d) #y avg
 
-#xxxAvg=xAvg*xsAvg #x^3 avg
 xxxAvg=xxxAvgf(d)
 
 xxxxAvg=xxxxAvgf(d)
 xxyAvg=xxyAvgf(d)
-#y=Ax^2+Bx+C
-#A=((xsAvg*yAvg*xsAvg)-(xAvg*yAvg*xxxAvg))/((xsAvg*xsAvg*xsAvg)-(math.pow(xxxAvg,2)))
-#B=((xAvg*yAvg*math.pow(xsAvg,2))-(xsAvg*yAvg*xsAvg*xAvg))/((xsAvg*xsAvg*xsAvg)-(math.pow(xxxAvg,2)))
-#C=yAvg-B*xAvg-A*xsAvg
+#y=Bx^2+Ax+C
+
 A=((xyAvg-xAvg*yAvg)*(xxxxAvg-xxAvg*xxAvg)-(xxyAvg-xxAvg*yAvg)*(xxxAvg-xAvg*xxAvg))/((xxAvg-xAvg*xAvg)*(xxxxAvg-xxAvg*xxAvg)-(xxxAvg-xAvg*xxAvg)*(xxxAvg-xAvg*xxAvg))
 B=((xxyAvg-xxAvg*yAvg)*(xxAvg-xAvg*xAvg)-(xyAvg-xAvg*yAvg)*(xxxAvg-xAvg*xxAvg))/((xxAvg-xAvg*xAvg)*(xxxxAvg-xxAvg*xxAvg)-math.pow(xxxAvg-xAvg*xxAvg,2))
 C=yAvg-A*xAvg-B*xxAvg
@@ -85,8 +82,8 @@ plt.ylim(-100,100)
 plt.xlim(-100,100)
 
 z = np.arange(-10,100,1)
-plt.ylim(-20,40)
-plt.xlim(-20,40)
+plt.ylim(-5,30)
+plt.xlim(-5,20)
 ax = plt.plot(d,'go') #'Go' displays the datapointsax = plt.plot(z,C*z*z+B*z+A)
 ax = plt.plot(z,B*z*z+A*z+C)
 
