@@ -56,7 +56,11 @@ def xxxAvgf(d):
 
 fig1 = plt.figure()
 
+<<<<<<< HEAD
 dataNum = 30
+=======
+dataNum = 3
+>>>>>>> ef2f4e737d83fa9d410352deb6e548184d4b74c0
 d = 10*np.random.rand(dataNum, 1)#10=x&y limit and # of points. 3=# of points * 3     
 
 xAvg = xAvgf(d) #x avg
@@ -78,10 +82,16 @@ B=((xxyAvg-xxAvg*yAvg)*(xxAvg-xAvg*xAvg)-(xyAvg-xAvg*yAvg)*(xxxAvg-xAvg*xxAvg))/
 C=yAvg-B*xAvg-A*xxAvg
 
 
+<<<<<<< HEAD
 
 z = np.arange(-100,100,1)
 plt.ylim(-100,100)
 plt.xlim(-100,100)
+=======
+z = np.arange(-10,10,1)
+plt.ylim(-20,40)
+plt.xlim(-20,40)
+>>>>>>> ef2f4e737d83fa9d410352deb6e548184d4b74c0
 ax = plt.plot(d,'go') #'Go' displays the datapointsax = plt.plot(z,C*z*z+B*z+A)
 ax = plt.plot(z,A*z*z+B*z+C)
 
