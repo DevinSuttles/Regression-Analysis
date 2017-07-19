@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import math
 
-def xyAvgf(d):#assumes that x increments as an integer
+def xyAvg(d):#assumes that x increments as an integer
     sum = 0.0
     counter = 0
     for i in d:
@@ -10,7 +10,7 @@ def xyAvgf(d):#assumes that x increments as an integer
         counter += 1
     return sum/d.size
 
-def xAvgf(d):#assumes that x increments as an integer
+def xAvg(d):#assumes that x increments as an integer
     sum = 0.0
     counter = 0;
     for i in d:
@@ -18,7 +18,7 @@ def xAvgf(d):#assumes that x increments as an integer
         counter += 1
     return sum/d.size
 
-def xsAvgf(d):#x squared avg, assumes that x increments as an integer
+def xsAvg(d):#x squared avg, assumes that x increments as an integer
     sum = 0.0
     counter  = 0
     for i in d:
@@ -26,13 +26,13 @@ def xsAvgf(d):#x squared avg, assumes that x increments as an integer
         counter += 1
     return sum/d.size
 
-def yAvgf(d):
+def yAvg(d):
     sum = 0
     for i in d:
         sum += i
     return sum/d.size
 
-def xxxxAvgf(d):
+def xxxxAvg(d):
     sum = 0
     counter = 0
     for i in d:
@@ -40,7 +40,7 @@ def xxxxAvgf(d):
         counter += 1
     return sum/d.size
 
-def xxyAvgf(d):
+def xxyAvg(d):
     sum = 0
     counter = 0
     for i in d:
@@ -48,7 +48,7 @@ def xxyAvgf(d):
         counter += 1
     return sum/d.size
 
-def xxxAvgf(d):
+def xxxAvg(d):
     sum = 0
     counter = 0
     for i in d:
@@ -61,15 +61,15 @@ fig1 = plt.figure()
 dataNum = 10
 d = 20*np.random.rand(dataNum, 1)#10=x&y limit and # of points. 3=# of points * 3     
 
-xAvg = xAvgf(d) #x avg
-xxAvg = xsAvgf(d) #x^2 avg
-xyAvg = xyAvgf(d) #xy avg
-yAvg = yAvgf(d) #y avg
+xAvg = xAvg(d) #x avg
+xxAvg = xsAvg(d) #x^2 avg
+xyAvg = xyAvg(d) #xy avg
+yAvg = yAvg(d) #y avg
 
-xxxAvg=xxxAvgf(d)
+xxxAvg=xxxAvg(d)
 
-xxxxAvg=xxxxAvgf(d)
-xxyAvg=xxyAvgf(d)
+xxxxAvg=xxxxAvg(d)
+xxyAvg=xxyAvg(d)
 #y=Bx^2+Ax+C
 
 A=((xyAvg-xAvg*yAvg)*(xxxxAvg-xxAvg*xxAvg)-(xxyAvg-xxAvg*yAvg)*(xxxAvg-xAvg*xxAvg))/((xxAvg-xAvg*xAvg)*(xxxxAvg-xxAvg*xxAvg)-(xxxAvg-xAvg*xxAvg)*(xxxAvg-xAvg*xxAvg))

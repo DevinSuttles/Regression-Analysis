@@ -4,10 +4,6 @@ import matplotlib.pyplot as plt
 import math
 
 
-def update_line(num, data, line):
-    line.set_data(data[..., :num])
-    return line,
-
 def xyAvg(d):#assumes that x increments as an integer
     sum = 0.0
     counter = 0
