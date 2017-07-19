@@ -32,7 +32,7 @@ def yAvg(d):
 
 fig1 = plt.figure()
 
-dataNum = 6
+dataNum = 3
 d = 10*np.random.rand(dataNum, 1)#10=x&y limit and # of points. 3=# of points * 3     
 
 xAvg = xAvg(d) #x avg
@@ -44,7 +44,6 @@ xxxAvg=xAvg*xsAvg #x^3 avg
 A=((xsAvg*yAvg*xsAvg)-(xAvg*yAvg*xxxAvg))/((xsAvg*xsAvg*xsAvg)-(math.pow(xxxAvg,2)))
 B=((xAvg*yAvg*math.pow(xsAvg,2))-(xsAvg*yAvg*xsAvg*xAvg))/((xsAvg*xsAvg*xsAvg)-(math.pow(xxxAvg,2)))
 C=yAvg-B*xAvg-A*xsAvg
-
 
 
 z = np.arange(-10,10,1)
