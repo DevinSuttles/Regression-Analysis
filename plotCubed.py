@@ -12,8 +12,10 @@ def xyAvgf(d):#assumes that x increments as an integer
 
 def xAvgf(d):#assumes that x increments as an integer
     sum = 0.0
+    counter = 0;
     for i in d:
-        sum += 1
+        sum += counter
+        counter += 1
     return sum/d.size
 
 def xsAvgf(d):#x squared avg, assumes that x increments as an integer
@@ -56,11 +58,7 @@ def xxxAvgf(d):
 
 fig1 = plt.figure()
 
-<<<<<<< HEAD
-dataNum = 30
-=======
-dataNum = 3
->>>>>>> ef2f4e737d83fa9d410352deb6e548184d4b74c0
+dataNum = 6
 d = 10*np.random.rand(dataNum, 1)#10=x&y limit and # of points. 3=# of points * 3     
 
 xAvg = xAvgf(d) #x avg
@@ -79,21 +77,18 @@ xxyAvg=xxyAvgf(d)
 #C=yAvg-B*xAvg-A*xsAvg
 A=((xyAvg-xAvg*yAvg)*(xxxxAvg-xxAvg*xxAvg)-(xxyAvg-xxAvg*yAvg)*(xxxAvg-xAvg*xxAvg))/((xxAvg-xAvg*xAvg)*(xxxxAvg-xxAvg*xxAvg)-(xxxAvg-xAvg*xxAvg)*(xxxAvg-xAvg*xxAvg))
 B=((xxyAvg-xxAvg*yAvg)*(xxAvg-xAvg*xAvg)-(xyAvg-xAvg*yAvg)*(xxxAvg-xAvg*xxAvg))/((xxAvg-xAvg*xAvg)*(xxxxAvg-xxAvg*xxAvg)-math.pow(xxxAvg-xAvg*xxAvg,2))
-C=yAvg-B*xAvg-A*xxAvg
+C=yAvg-A*xAvg-B*xxAvg
 
-
-<<<<<<< HEAD
 
 z = np.arange(-100,100,1)
 plt.ylim(-100,100)
 plt.xlim(-100,100)
-=======
-z = np.arange(-10,10,1)
+
+z = np.arange(-10,100,1)
 plt.ylim(-20,40)
 plt.xlim(-20,40)
->>>>>>> ef2f4e737d83fa9d410352deb6e548184d4b74c0
 ax = plt.plot(d,'go') #'Go' displays the datapointsax = plt.plot(z,C*z*z+B*z+A)
-ax = plt.plot(z,A*z*z+B*z+C)
+ax = plt.plot(z,B*z*z+A*z+C)
 
 plt.xlabel('x')
 plt.ylabel('y')
